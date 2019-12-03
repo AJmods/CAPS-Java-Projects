@@ -1,20 +1,33 @@
 public class RoboticsTeam {
 
 
-    int number;
-    String name;
-    String school;
-    String City;
-    String State;
-    double rp;
-    double tbp;
-    int matches;
-    int highest;
+    public int number;
+    public String name;
+    public String school;
+    public String City;
+    public String State;
+    public double rp;
+    public double tbp;
+    public int matches;
+    public int highest;
 
 
     public RoboticsTeam()
     {
 
+    }
+    public String getStat(int num)
+    {
+        if (num==0) return Integer.toString(getNumber());
+        if (num==1) return  getName();
+        else if (num == 2) return getSchool();
+        else if (num == 3) return getCity();
+        else if (num == 4) return getState();
+        else if (num == 5) return Double.toString(getRp());
+        else if (num == 6) return Double.toString(getTbp());
+        else if (num == 7) return Integer.toString(getMatches());
+        else if (num == 8) return Integer.toString(getHighest());
+        return "";
     }
 
     public void setCity(String city) {
