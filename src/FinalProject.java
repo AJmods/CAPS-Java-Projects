@@ -38,9 +38,9 @@ public class FinalProject {
         team.setCity(input.next());
         System.out.println("Enter Team State");
         team.setState(input.next());
-        System.out.println("Enter Current Team RP");
+        System.out.println("Enter Average Team RP");
         team.setRp(input.nextInt());
-        System.out.println("Enter Current Team TBP");
+        System.out.println("Enter Average Team TBP");
         team.setTbp(input.nextInt());
         System.out.println("Enter Current matches played");
         team.setMatches(input.nextInt());
@@ -53,7 +53,7 @@ public class FinalProject {
         //Table Generator class from https://stackoverflow.com/questions/2745206/output-in-a-table-format-in-javas-system-out
         TableGenerator tableGenerator = new TableGenerator();
 
-        Field fields[] = RoboticsTeam.class.getFields();
+        Field[] fields = RoboticsTeam.class.getFields();
 
         List<String> headerList = new ArrayList<>();
 

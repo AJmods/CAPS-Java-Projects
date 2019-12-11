@@ -1,4 +1,4 @@
-package com.company.Chapter4;
+package com.company.Chapter4.Problem5;
 
 public class BankCharges {
 
