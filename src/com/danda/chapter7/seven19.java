@@ -1,0 +1,32 @@
+package com.danda.chapter7;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
+public class seven19 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter lots of integers, enter 0 when done");
+        int answer;
+        List<Integer> answers = new ArrayList<>();
+        do {
+            answer = scanner.nextInt();
+            if (answer != 0) answers.add(answer);
+        } while (answer != 0);
+        if (isSorted(answers)) System.out.println("the list is sorted");
+        else System.out.println("The list is not sorted");
+    }
+    public static boolean isSorted(int[] nums)
+    {
+        int[] nums2 = nums.clone();
+        Arrays.sort(nums2);
+        return Arrays.equals(nums, nums2);
+    }
+    public static boolean isSorted(List<Integer> list)
+    {
+        return isSorted(list.stream().mapToInt(i->i).toArray());
+    }
+}
