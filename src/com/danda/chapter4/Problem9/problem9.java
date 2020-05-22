@@ -16,8 +16,8 @@ public class problem9 {
             choice=scanner.nextInt();
         } while (choice<0 || choice > 2);
 
-        if (choice==0) System.out.println(distance + " in air speed is " + soundSpeed.getSpeedInAir() + "mph");
-        else if (choice==1) System.out.println(distance + " in water speed is " + soundSpeed.getSpeedInWater() + "mph");
-        else if (choice==2) System.out.println(distance + " in steel speed is " + soundSpeed.getSpeedInASteel()+ "mph");
+        if (choice==0) System.out.println(distance + " in air speed is " + soundSpeed.getSpeedInAir() + "fps");
+        else if (choice==1) System.out.println(distance + " in water speed is " + soundSpeed.getSpeedInWater() + "fps");
+        else if (choice==2) System.out.println(distance + " in steel speed is " + soundSpeed.getSpeedInASteel()+ "fps");
     }
 }

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class eight1 {
 
     public static void main(String[] args) {
-        System.out.print("Enter in a 3 by 4 matrix row by row");
+        System.out.println("Enter in a 3 by 4 matrix row by row");
         Scanner scanner = new Scanner(System.in);
         double[][] arr = new double[3][4];
         for (int i = 0; i < arr.length; i++) {
@@ -16,9 +16,17 @@ public class eight1 {
         }
         for (int i = 0; i < arr.length; i++)
         {
-            System.out.println("Sum of column " + i + " = " + sumArray(arr[i]));
+            System.out.println("Sum of column " + i + " = " + sumRow(arr,i));
         }
 
+    }
+    public static double sumRow(double[][] arr, int row)
+    {
+        double sum = 0;
+        for (double[] d : arr) {
+            sum+=d[row];
+        }
+        return sum;
     }
     public static double sumArray(double[] arr)
     {

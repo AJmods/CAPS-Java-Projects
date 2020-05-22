@@ -2,7 +2,7 @@ package com.danda.chapter3;
 
 public class Widget {
 
-    int numWidget;
+    double numWidget;
 
     public Widget(int numWidget)
     {
@@ -10,7 +10,8 @@ public class Widget {
     }
     public int calcDays()
     {
-        return (int) (Math.round(calcHours()/16));
+
+        return (int) Math.ceil(calcHours()/16);
     }
     private double calcHours()
     {

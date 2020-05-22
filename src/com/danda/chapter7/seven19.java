@@ -1,9 +1,6 @@
 package com.danda.chapter7;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class seven19 {
 
@@ -17,7 +14,17 @@ public class seven19 {
             if (answer != 0) answers.add(answer);
         } while (answer != 0);
         if (isSorted(answers)) System.out.println("the list is sorted");
-        else System.out.println("The list is not sorted");
+        else  {
+            System.out.println("The list is not sorted");
+            Collections.sort(answers);
+            System.out.println("Sorted List:");
+            printList(answers);
+        }
+    }
+    public static void printList(List list) {
+        for (Object object : list) {
+            System.out.println(object);
+        }
     }
     public static boolean isSorted(int[] nums)
     {
@@ -25,8 +32,9 @@ public class seven19 {
         Arrays.sort(nums2);
         return Arrays.equals(nums, nums2);
     }
-    public static boolean isSorted(List<Integer> list)
-    {
-        return isSorted(list.stream().mapToInt(i->i).toArray());
+    public static boolean isSorted(List<Integer> list) {
+        List<Integer> list2 = new ArrayList<>(list);
+        Collections.sort(list);
+        return list.equals(list2);
     }
 }
